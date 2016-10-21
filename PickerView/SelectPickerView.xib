@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="SelectPickerView" id="iN0-l3-epB" customClass="SelectPickerView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hod-qe-WCn">
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                </view>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BCP-le-jk4">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="d5Q-1w-Ynb"/>
+                    </constraints>
+                </pickerView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5T-13-9Xo">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="ADU-ev-m52"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem title="取消" id="ds7-f2-XIk">
+                            <connections>
+                                <action selector="cancleAction:" destination="iN0-l3-epB" id="QXG-Vm-bbD"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="PMW-XD-tHk"/>
+                        <barButtonItem title="确定" id="hVl-xX-6uX">
+                            <connections>
+                                <action selector="comfirmAction:" destination="iN0-l3-epB" id="1ws-ZO-a5u"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="BCP-le-jk4" firstAttribute="top" secondItem="d5T-13-9Xo" secondAttribute="bottom" id="6Wz-4o-Q6u"/>
+                <constraint firstAttribute="bottom" secondItem="BCP-le-jk4" secondAttribute="bottom" id="9ao-D9-uLh"/>
+                <constraint firstItem="d5T-13-9Xo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EIq-sC-G5g"/>
+                <constraint firstAttribute="trailing" secondItem="BCP-le-jk4" secondAttribute="trailing" id="Ttv-xR-vwk"/>
+                <constraint firstItem="d5T-13-9Xo" firstAttribute="top" secondItem="Hod-qe-WCn" secondAttribute="bottom" id="U7h-kK-pR5"/>
+                <constraint firstAttribute="trailing" secondItem="Hod-qe-WCn" secondAttribute="trailing" id="UCr-26-Kzs"/>
+                <constraint firstItem="BCP-le-jk4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dR6-2p-Xtg"/>
+                <constraint firstAttribute="trailing" secondItem="d5T-13-9Xo" secondAttribute="trailing" id="dh3-A8-IsS"/>
+                <constraint firstItem="Hod-qe-WCn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jCU-Os-mts"/>
+                <constraint firstItem="Hod-qe-WCn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vGE-oz-JUT"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <connections>
+                <outlet property="bg" destination="Hod-qe-WCn" id="gOH-no-Yaz"/>
+                <outlet property="pickerView" destination="BCP-le-jk4" id="z1P-uf-YEX"/>
+            </connections>
+        </view>
+    </objects>
+</document>
