@@ -27,7 +27,7 @@
     NSArray *arra2 = @[@[@"河南省",@"山西省",@"江苏省"],@[@"云南省",@"四川省",@"陕西省"],@[@"吉林省",@"黑龙江省"],@[@"广东省",@"湖南省",@"广西省"]];
     NSArray *arra1 = @[@[@"艾欧尼亚",@"战争学院"],@[@"无畏先锋",@"扭曲丛林"]];
     NSArray *array0 = @[@"电信区",@"联通区"];
-    NSArray *arraay = @[array0];
+    NSArray *arraay = @[array0,arra1,arra2];
     [selectPickerView addData:arraay];
     [self.view addSubview:selectPickerView];
     selectPickerView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
